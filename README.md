@@ -1,1 +1,2 @@
-# projeto-lion-school
+# Projeto Lion School
+Projeto integrado entre PWFE e PWBE
