@@ -64,8 +64,62 @@ nav {
 
 /***** MAIN *****/
 main {
-    background-color: tomato;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.devices-container {
+    width: 52rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.4rem;
+}
+
+.title {
+    font-size: 7rem;
+    font-weight: 200;
+}
+
+.blue-title {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.device-image {
+    height: 40rem;
+    width: 60rem;
+}
+
+.girl-image {
+    height: 60rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+    padding: 10rem 16rem;
+    color: white;
+    font-size: 6.4rem;
+    font-weight: 600;
 }
 
 /***** FOOTER *****/
