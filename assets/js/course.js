@@ -30,9 +30,9 @@ const createCardCourse = async (json) => {
 
         container.appendChild(card)
 
-        div.addEventListener(`click`, (evento) => {
+        card.addEventListener(`click`, (evento) => {
             evento.preventDefault()
-            const course = div.id
+            const course = card.id
             localStorage.setItem(`course`, course)
             location.href = `./assets/pages/course.html`
         })
