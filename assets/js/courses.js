@@ -4,7 +4,7 @@ AUTOR: ARTHUR PILOTO
 DATA DE CRIAÇÃO: 21/09/2022
 *********************************************************************/
 `use strict`
-import { searchCourse } from "./course-fetch.js"
+import { searchCourse } from "./courses-fetch.js"
 
 const data = await searchCourse()
 
