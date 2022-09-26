@@ -29,6 +29,13 @@ const createCardCourse = async (json) => {
         card.id = element.sigla.toLowerCase()
 
         container.appendChild(card)
+
+        div.addEventListener(`click`, (evento) => {
+            evento.preventDefault()
+            const course = div.id
+            localStorage.setItem(`course`, course)
+            location.href = `./assets/pages/course.html`
+        })
     });
 }
 createCardCourse(data)
