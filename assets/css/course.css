@@ -70,3 +70,20 @@ select {
     color: var(--main-color);
     padding: 3.5rem;
 }
+
+.student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    padding: .8rem 1.2rem 3rem 1.2rem;
+    gap: 1.6rem;
+    color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.749);
+}
+
+.student-photo {
+    width: 200px;
+    height: 200px;
+}
