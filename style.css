@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+    --main-color: #3347B0;
+    --secondary-color: #BCC2E5;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/***** MAIN *****/
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.devices-container {
+    width: 52rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.4rem;
+}
+
+.title {
+    font-size: 7rem;
+    font-weight: 200;
+}
+
+.blue-title {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.device-image {
+    height: 40rem;
+    width: 60rem;
+}
+
+.girl-image {
+    height: 60rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    background-color: var(--main-color);
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+    padding: 10rem 16rem;
+    color: white;
+    font-size: 6.4rem;
+    font-weight: 600;
+}
+
+.card-icon {
+    height: 10rem;
+}
+
