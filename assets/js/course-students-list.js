@@ -2,7 +2,7 @@
 import { getStudents } from "./course-students-fetch.js"
 
 const data = localStorage.getItem(`course`)
-const info = getStudents(data)
+const info = await getStudents(data)
 
 const createCardStudent = async (json) => {
     const container = document.getElementById(`students`)
