@@ -71,6 +71,11 @@ select {
     padding: 3.5rem;
 }
 
+#students {
+    display: flex;
+    gap: 6.2rem;
+}
+
 .student {
     display: flex;
     flex-direction: column;
