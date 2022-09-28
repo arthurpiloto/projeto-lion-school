@@ -22,6 +22,12 @@ const createCardStudent = async (json) => {
         card.appendChild(img)
         card.appendChild(span)
         card.id = element.matricula
+
+        if (element.status.toLowerCase() == `cursando`) {
+            card.classList.add(`blue-block`)
+        } else if (element.status.toLowerCase() == `finalizado`) {
+            card.classList.add(`yellow-block`)
+        }
         container.appendChild(card)
     });
 }
