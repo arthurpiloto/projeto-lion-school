@@ -46,6 +46,13 @@ const createCardStudent = async (json) => {
             card.classList.add(`yellow-block`)
         }
         container.appendChild(card)
+
+        card.addEventListener(`click`, (evento) => {
+            evento.preventDefault()
+            const student = card.id
+            localStorage.setItem(`student`, student)
+            location.href = `./student.html`
+        })
     });
 }
 createCardStudent(info)
