@@ -52,16 +52,6 @@ select {
     
 }
 
-.blue-block {
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.596);
-    background-color: var(--main-color);
-}
-
-.yellow-block {
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.749);
-    background-color: var(--yellow-color);
-}
-
 .title-container {
     display: flex;
     align-items: center;
@@ -93,4 +83,14 @@ select {
 .student-photo {
     width: 200px;
     height: 200px;
+}
+
+.blue-block {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.596);
+    background-color: var(--main-color);
+}
+
+.yellow-block {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.749);
+    background-color: var(--yellow-color);
 }

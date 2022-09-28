@@ -1,8 +1,25 @@
 `use strict`
 import { getStudents } from "./course-students-fetch.js"
+import { searchCourse } from "./courses-fetch.js"
 
 const data = localStorage.getItem(`course`)
 const info = await getStudents(data)
+const courseName = await searchCourse()
+
+const { cursos } = courseName
+let title = ``
+
+cursos.forEach(element => {
+    if (data == element.sigla.toLowerCase()) {
+        title = element.nome.split('-')[1].replace('Técnico em', '')
+    }
+})
+
+const changeTitle = () => {
+    const titleName = document.getElementById(`title`)
+    titleName.textContent = title
+}
+changeTitle()
 
 const createCardStudent = async (json) => {
     const container = document.getElementById(`students`)
