@@ -1,5 +1,5 @@
 `use strict`
-import { getStudents } from "./course-students-fetch.js"
+import { getStudents, getStudentsByFilter } from "./course-students-fetch.js"
 import { searchCourse } from "./courses-fetch.js"
 
 const data = localStorage.getItem(`course`)
