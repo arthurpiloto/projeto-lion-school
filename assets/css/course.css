@@ -70,6 +70,7 @@ select option {
 
 #students {
     display: flex;
+    flex-wrap: wrap;
     gap: 6.2rem;
 }
 
