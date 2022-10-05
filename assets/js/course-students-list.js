@@ -2,15 +2,15 @@
 import { getStudents, getStudentsByFilter } from "./course-students-fetch.js"
 import { searchCourse } from "./courses-fetch.js"
 
-const data = localStorage.getItem(`course`)
-const info = await getStudents(data)
-const courseName = await searchCourse()
+const courseInitial = localStorage.getItem(`course`)
+const studentsJSON = await getStudents(courseInitial)
+const coursesJSON = await searchCourse()
 
-const { cursos } = courseName
+const { cursos } = coursesJSON
 let title = ``
 
 cursos.forEach(element => {
-    if (data == element.sigla.toLowerCase()) {
+    if (courseInitial == element.sigla.toLowerCase()) {
         title = element.nome.split('-')[1].replace('Técnico em', '')
     }
 })
@@ -55,4 +55,21 @@ const createCardStudent = async (json) => {
         })
     });
 }
-createCardStudent(info)
+createCardStudent(studentsJSON)
+
+const clearCards = () => {
+    const cards = document.querySelectorAll(`.student`)
+    cards.forEach((card) => card.remove())
+}
+
+const statusSelect = document.getElementById(`select`)
+statusSelect.addEventListener(`change`, async (el) => {
+    const status = statusSelect.value
+    const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
+
+    if (status == `status`) {
+        location.reload()
+    }
+    clearCards()
+    createCardStudent(studentsFilter)
+})
