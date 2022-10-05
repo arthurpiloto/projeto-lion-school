@@ -3,7 +3,6 @@ import { getStudent, getDisciplines } from "./student-fetch.js"
 
 const infoStudent = localStorage.getItem(`student`)
 const disciplines = await getDisciplines(infoStudent)
-console.log(disciplines)
 const student = await getStudent(infoStudent)
 
 const createCardStudent = async (json) => {
@@ -64,10 +63,13 @@ const createCardDiscipline = async (json) => {
 
         if (element.media >= 70) {
             progressBar.classList.add(`approved`)
+            spanHeader.classList.add(`approved`)
         } else if (element.media < 70 && element.media >= 50) {
             progressBar.classList.add(`exam`)
+            spanHeader.classList.add(`exam`)
         } else {
             progressBar.classList.add(`disapproved`)
+            spanHeader.classList.add(`disapproved`)
         }
 
         container.appendChild(spanHeader)

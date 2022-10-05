@@ -77,3 +77,15 @@ main {
     color: var(--main-color);
     font-weight: 700;
 }
+
+.approved {
+    color: var(--main-color);
+}
+
+.exam {
+    color: var(--yellow-color);
+}
+
+.disapproved {
+    color: var(--red-color);
+}
